@@ -1,14 +1,15 @@
 choice = ""
 
-while choice != "5":
+while choice != "6":
     print("\n ====Menu====")
     print("1. Burger")
     print("2. Pizza")
     print("3. Coffee")
     print("4. Pasta")
-    print("5. Exit")
+    print("5. Cold Drinks")
+    print("6. Exit")
 
-    choice = input("Choose an option (1-5): ")
+    choice = input("Choose an option (1-6): ")
 
     if choice == "1":
         print("Burger Ordered")
@@ -23,12 +24,10 @@ while choice != "5":
         print("Pasta Ordered")
 
     elif choice == "5":
+        print("Cold Drinks")
+
+    elif choice == "6":
         print("Thank You!")
 
     else:
         print("Invalid Choice. Please select a valid option.")    
-
-
-
-
-          
