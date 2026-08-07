@@ -1,11 +1,10 @@
 
 
 print("----------------")
-
-
+correct_password = "python123"
 password = ""
 
-if password != "python123":
+while password != correct_password:
     password = input("Enter Password: ")
 
 print("Login Successful")
