@@ -16,7 +16,7 @@ print("Correct Answer")
 
 
 print("\n ====================")
-print("\n")
+print("")
 
 secret_number = 102
 guess = 0
@@ -38,4 +38,4 @@ while guess != secret_number:
         
 print("Correct Answer")
 
-print("\n")
+print("")
