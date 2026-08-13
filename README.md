@@ -519,3 +519,7 @@ Mini E-commerce Logic
 | `+5` বা তার বেশি                         | 🚀 Way Too High  |
 | `-1` থেকে `-4`                  | 🙂 Slightly Low  |
 | `-5` বা তার বেশি কম                    | ❄️ Way Too Low   |
+
+================================
+
+break হলো এমন একটি Loop Control Statement, যা execute হলে Loop-কে সঙ্গে সঙ্গে সম্পূর্ণভাবে বন্ধ করে দেয়।
