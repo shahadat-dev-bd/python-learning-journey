@@ -1,39 +1,41 @@
-# students = ["Shahadat", "Rahim", "Karim", "Hasan"]
+students = ["Shahadat", "Rahim", "Karim", "Hasan"]
 
-# for index, student in enumerate(students, start=5):
-#     print(index, student)
-
-
-# print("========")    
-
-# students = ["Shahadat", "Rahim", "Karim", "Hasan"]
-# marks = [85, 45, 72, 90]
-
-# for number, student in enumerate(students, start=1):
-#     if marks [number - 1] >= 50:
-#         print(number,".", student, "→", marks [number - 1], "→", "Pass")
-#     else:
-#         print(number,".", student,"→",marks [number - 1], "→", "Fail")  
+for index, student in enumerate(students, start=5):
+    print(index, student)
 
 
-# print("========")       
-# # 
-# 
+print("========")    
 
-# products = ["Shirt", "Pants", "Jacket", "Shoes", "Watch"] 
-# search = ""
+students = ["Shahadat", "Rahim", "Karim", "Hasan"]
+marks = [85, 45, 72, 90]
 
-# search = input("Enter Product: ")
+for number, student in enumerate(students, start=1):
+    if marks [number - 1] >= 50:
+        print(number,".", student, "→", marks [number - 1], "→", "Pass")
+    else:
+        print(number,".", student,"→",marks [number - 1], "→", "Fail")  
 
-# for product in products:
-#      print("Checking:", product)
-#      if search == product:
-#         print("Product Found!")
-#         break
-# else:
-#     print("Product Not Found")
+
+print("========")       
+
+
+
+products = ["Shirt", "Pants", "Jacket", "Shoes", "Watch"] 
+search = ""
+
+search = input("Enter Product: ")
+
+for product in products:
+     print("Checking:", product)
+     if search == product:
+        print("Product Found!")
+        break
+else:
+    print("Product Not Found")
+
      
-# print("========")       
+print("========")    
+
 
 pins = ["123456", "111111", "636363", "555555", "999999"]
 correct_pin = ""
