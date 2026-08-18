@@ -1,22 +1,22 @@
-students = ["Shahadat", "Rahim", "Karim", "Hasan"]
+# students = ["Shahadat", "Rahim", "Karim", "Hasan"]
 
-for index, student in enumerate(students, start=5):
-    print(index, student)
-
-
-print("========")    
-
-students = ["Shahadat", "Rahim", "Karim", "Hasan"]
-marks = [85, 45, 72, 90]
-
-for number, student in enumerate(students, start=1):
-    if marks [number - 1] >= 50:
-        print(number,".", student, "→", marks [number - 1], "→", "Pass")
-    else:
-        print(number,".", student,"→",marks [number - 1], "→", "Fail")  
+# for index, student in enumerate(students, start=5):
+#     print(index, student)
 
 
-print("========")       
+# print("========")    
+
+# students = ["Shahadat", "Rahim", "Karim", "Hasan"]
+# marks = [85, 45, 72, 90]
+
+# for number, student in enumerate(students, start=1):
+#     if marks [number - 1] >= 50:
+#         print(number,".", student, "→", marks [number - 1], "→", "Pass")
+#     else:
+#         print(number,".", student,"→",marks [number - 1], "→", "Fail")  
+
+
+# print("========")       
 
 
 
@@ -34,18 +34,18 @@ else:
     print("Product Not Found")
 
      
-print("========")    
+# print("========")    
 
 
-pins = ["123456", "111111", "636363", "555555", "999999"]
-correct_pin = ""
+# pins = ["123456", "111111", "636363", "555555", "999999"]
+# correct_pin = ""
 
-correct_pin = input("Enter Your PIN: ")
+# correct_pin = input("Enter Your PIN: ")
 
-for pin in pins:
-    print("Checking PIN:", pin)
-    if correct_pin == pin:
-        print("Access Granted")
-        break
-else:
-    print("Access Denied")   
+# for pin in pins:
+#     print("Checking PIN:", pin)
+#     if correct_pin == pin:
+#         print("Access Granted")
+#         break
+# else:
+#     print("Access Denied")   
