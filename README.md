@@ -583,3 +583,130 @@ del list[index]
 Index দিয়ে Item মুছে ফেলে
       ↓
 Item return করে না
+
+============================
+
+clear() ব্যবহার করে একটি List-এর সবগুলো Item একসাথে মুছে ফেলা যায়।
+list_name.clear()
+
+=======================
+
+len() ব্যবহার করে কোনো List-এর মধ্যে মোট কতগুলো Item আছে সেটা জানা যায়।
+len(list_name)
+len() List পরিবর্তন হওয়ার সাথে সাথে নতুন Length দেয়
+
+========================================
+
+কোনো নির্দিষ্ট Item List-এর মধ্যে আছে কি না তা জানার জন্য।  
+in (Operator) এবং not in (Operator) ব্যবহার করা হয়।
+in এবং not in-কে if Condition-এর সাথেও ব্যবহার করা যায়।
+
+if search in students:
+ইন দিয়ে লিস্ট এর মধ্যে আইটেম আছে কিনা সেটা সার্স করছে আর ইফ সিদ্ধান্ত নেওয়ার জন্য ব্যবহার করা হয়েছে
+
+==========================
+count() Method
+একটি নির্দিষ্ট Item List-এর মধ্যে কতবার আছে।
+list_name.count(value)
+========================
+count() বনাম len()
+len(fruits) দিয়ে পরো List-এ মোট কতটি Item আছে
+আর 
+fruits.count("Apple") দিয়ে "Apple" কতবার আছে
+====================
+
+index()
+index() ব্যবহার করে List-এর মধ্যে কোনো নির্দিষ্ট Value প্রথম কোন Index-এ আছে সেটা বের করা যায়।
+list_name.index(value)
+-==================
+enumerate() Index এবং Value দুটোই দরকার হয় তখন enumerate() ব্যবহার হয়।।
+========================
+List-এর Copy
+List-এর একটি আলাদা Copy বানাতে চাই, তাহলে ব্যবহার করতে পারি copy()
+new_students = students.copy()
+=================================
+students = students বনাম students.copy()
+new_students = students
+        ↓
+একই List
+
+new_students = students.copy()
+        ↓
+আলাদা Copy
+
+=============================
+List Sorting
+sort()
+sort() List-এর Number-গুলোকে ছোট থেকে বড় সাজিয়েছে:এটাকে বলে Ascending Order।
+
+বড় থেকে ছোট সাজিয়েছে:এটাকে বলে Descending Order
+
+sort() = Ascending
+sort(reverse=True) = Descending
+
+========================
+sorted()
+দুটোর কাজ দেখতে একই রকম মনে হতে পারে, কিন্তু একটা গুরুত্বপূর্ণ পার্থক্য আছে।
+sorted() একটি List-এর Item-গুলোকে ক্রমানুসারে সাজিয়ে একটি নতুন List return করে।
+
+sort()
+↓
+মূল List সাজিয়ে দেয়
+
+sorted()
+↓
+নতুন সাজানো List দেয়
+মূল List আগের মতো থাকে
+
+=========================
+🧠 দ্রুত মনে রাখার টেবিল
+Method	কাজ
+append()	শেষে ১টি Item যোগ করে 
+insert()	নির্দিষ্ট Position-এ ১টি Item যোগ করে
+extend()	একাধিক Item যোগ করে
+remove()	Value দিয়ে Item মুছে ফেলে
+pop()	Index দিয়ে Item মুছে + Item return করে
+clear()	সব Item মুছে ফেলে
+sort()	মূল List Sort করে
+copy()	আলাদা List Copy তৈরি করে 
+=========================
+যেসব Method মূল List পরিবর্তন করে:
+append()
+insert()
+extend()
+remove()
+pop()
+clear()
+sort()
+
+=======================
+
+যেটা আলাদা List তৈরি করে:
+copy()
+আর:
+sorted()
+
+➡️ নতুন sorted List return করে, মূল List পরিবর্তন করে না।
+
+============================
+Nested Lists - একটি List-এর ভিতরে আরেকটি List
+
+🧠 সহজ নিয়ম
+students[Outer Index][Inner Index]
+=========================
+
+🧠 Debugging-এর সময় প্রথম প্রশ্ন:
+
+"আমি যে Index ব্যবহার করেছি, সেটা কি List-এর মধ্যে আছে?"
+=======================
+sort()
+→ মূল List পরিবর্তন করে
+→ নতুন List return করে না
+→ None return করে
+
+sorted()
+→ মূল List পরিবর্তন করে না
+→ নতুন Sorted List return করে
+
+================
+copy() List-কে আলাদা করে। sorted() শুধু নতুন sorted List তৈরি করে।
