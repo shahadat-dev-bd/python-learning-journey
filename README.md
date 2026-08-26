@@ -710,3 +710,195 @@ sorted()
 
 ================
 copy() List-কে আলাদা করে। sorted() শুধু নতুন sorted List তৈরি করে।
+===================
+
+📚 Chapter 7 — Tuples
+Tuple হলো একাধিক Item একসাথে রাখার একটি Collection, অনেকটা List-এর মতো।
+List পরিবর্তন করা যায় এটাকে বলে Mutable, কিন্তু Tuple-এর Item সরাসরি পরিবর্তন করা যায় না। এটাকে বলা হয় Immutable।
+
+ধরো, তোমার কাছে একটি Student-এর তথ্য আছে: এই তথ্যের মধ্যে কিছু Value তুমি স্থায়ী রাখতে চাও এবং প্রোগ্রামের অন্য অংশ যেন ভুল করে এগুলো পরিবর্তন করতে না পারে।
+
+তখন Tuple ব্যবহার করা ভালো। তাই এই ধরনের স্থির/পরিবর্তন না করার উদ্দেশ্যে রাখা Data-এর জন্য Tuple উপযুক্ত।
+
+Tuple-এর Item-এ নতুন Value assign করা যায় না।
+
+দুটোর মধ্যে মূল পার্থক্য:
+
+| বিষয়                    | List    | Tuple     |
+| ----------------------- | ------- | --------- |
+| Syntax                  | `[ ]`   | `( )`     |
+| একাধিক Item রাখা যায়    | ✅      | ✅       |
+| Index আছে              | ✅      | ✅      |
+| Loop করা যায়            | ✅      | ✅       |
+| Item পরিবর্তন করা যায়    | ✅      | ❌       |
+| Item Add/Remove করা যায় | ✅      | ❌       |
+| Nature                  | Mutable  | Immutable |
+
+🧠 খুব সহজভাবে মনে রাখো
+List = পরিবর্তনযোগ্য Collection
+
+Tuple = স্থির Collection
+
+যখন একাধিক Data একসাথে রাখতে চাই এবং সেই Data-কে পরিবর্তন করা উচিত/প্রয়োজন নেই, তখন Tuple ব্যবহার করা যায়।
+================================
+
+📚 Tuple তৈরি করা
+আজ আমরা ৪টি বিষয় শিখব:
+Tuple Syntax
+একাধিক Item-এর Tuple
+Single-item Tuple
+বিভিন্ন Data Type-এর Tuple
+
+১. Tuple Syntax
+variable = (item1, item2, item3)
+
+Single-item Tuple বানাতে comma দিতে হবে: যদি comma না থাকে তাহলে সেটা Tuple নয়।
+Single-item Tuple-এর ক্ষেত্রে ,-টাই আসল।
+
+একটি Tuple-এর মধ্যে বিভিন্ন Data Type রাখা যায়।
+
+সবচেয়ে গুরুত্বপূর্ণ:
+Single-item Tuple তৈরি করতে comma , অবশ্যই দিতে হবে।
+=================
+২. Positive Index
+যখন আমরা বাম দিক থেকে Index ব্যবহার করি, তখন সেটাকে Positive Index বলা হয়।
+
+৩. Negative Index
+Tuple-এ আমরা ডান দিক থেকেও Index ব্যবহার করতে পারি।
+এটাকে Negative Index বলা হয়।
+
+==================
+
+Tuple Slicing
+Tuple-এর নির্দিষ্ট অংশ একসাথে বের করার পদ্ধতিকে Slicing বলে।
+Slicing-এর Basic Syntax
+tuple[start:end]
+start Index থেকে শুরু হবে, কিন্তু end Index-এর Item আসবে না।
+Start included, End excluded
+
+পুরো Tuple Copy করা
+print(fruits[:])
+🧠 তাই মূল Rule:
+
+যে Item থেকে শুরু করতে চাও → তার Index হলো start
+যে Item-এর আগে পর্যন্ত নিতে চাও → তার Index হলো end
+
+⭐ মনে রাখার সহজ নিয়ম
+Tuple
+│
+├── Access করা যায়       ✅
+├── Index ব্যবহার করা যায় ✅
+├── Slicing করা যায়       ✅
+├── Loop করা যায়          ✅
+│
+└── Item পরিবর্তন         ❌
+
+=====================
+
+Tuple Unpacking
+Tuple Unpacking হলো একটি Tuple-এর একাধিক Value-কে একসাথে আলাদা আলাদা Variable-এর মধ্যে রাখা।
+
+Variable-এর সংখ্যা এবং Tuple-এর Item সংখ্যা মিলতে হবে
+
+==============================
+* দিয়ে একাধিক Value নেওয়া
+
+একটা গুরুত্বপূর্ণ Rule:
+একটি Unpacking Assignment-এ সাধারণত একটির বেশি * Variable রাখা যায় না।
+
+=========================
+
+Function থেকে Tuple ব্যবহার করে একাধিক Value Return করার সুবিধা কী?
+
+যখন একটি Function থেকে একসাথে কয়েকটি Result দরকার তখন সাধারণভাবে আলাদা আলাদা Function বানানোর দরকার নেই। এটাই Function থেকে Tuple ব্যবহার করে একাধিক Value Return করার সুবিধা।
+
+==================
+
+কখন List ব্যবহার করবো আর কখন Tuple ব্যবহার করবো?
+
+যখন Data পরিবর্তন হতে পারে → তখন List ব্যবহার করা ভালো
+Student-এর Marks পরিবর্তন হতে পারে → তখন List ব্যবহার করা ভালো
+
+যখন Data পরিবর্তন করা উচিত নয় তখন Tuple ব্যবহার করা ভালো
+Coordinate-এর মতো Fixed Data → তখন Tuple ব্যবহার করা ভালো
+
+"Data পরিবর্তন করা যাবে না মানেই সবসময় Tuple ব্যবহার করতেই হবে।" এটা একটা design choice।
+
+আমরা সাধারণত Tuple ব্যবহার করি যখন Data-কে একটি fixed collection হিসেবে রাখতে চাই এবং accidental modification এড়াতে চাই।
+================
+Nested Tuple / List
+
+Nested Structure-এর ভিতরের Data Type কী, সেটা না দেখলে TypeError হবে কি না সঠিকভাবে বলা যাবে না।
+
+=================
+Tuple-এর মূল Methods
+Tuple-এর মধ্যে কোনো Value কতবার আছে সেটা বের করে।
+কোনো Value প্রথম কোন position-এ আছে সেটা বের করে index() দিয়ে। 
+
+Tuple-এর Built-in Function
+len() - len() Tuple-এর মধ্যে মোট কতটি Item আছে সেটা বের করে।
+
+type() - কোন Data Type ব্যবহার করা হয়েছে সেটা দেখতে type() Built-in Function ব্যবহার করা হয়। 
+
+in — Membership Check
+কোনো Value Tuple-এর মধ্যে আছে কি না চেক করতে in Built-in Function ব্যবহার করা হয়। 
+
+not in - কোনো Value Tuple-এর মধ্যে নেই কি না সেটা পরীক্ষা করতে not in Built-in Function ব্যবহার করা হয়।
+
+min() ও max()
+সংখ্যার Tuple হলে সবচেয়ে ছোট ও বড় Value বের করতে পারি min() ও max() Built-in Function ব্যবহার করা হয়।
+
+sum() -  সংখ্যার Tuple-এর সব Value যোগ করতে sum() Built-in Function ব্যবহার করা হয়।
+
+sorted() - Tuple থেকে Sorted List তৈরি করতে sorted() Built-in Function ব্যবহার করা হয়।
+sorted() Tuple পরিবর্তন করে না এবং Result হিসেবে List দেয়।
+
+list() এবং tuple()
+Tuple-কে List করা যায় এবং আবার List-কে Tuple করা যায়। এটা করতে fruits = ["Apple", "Banana", "Mango"] Built-in Function ব্যবহার করা হয়।
+
+Method বনাম Built-in Function
+fruits.count("Apple")
+fruits.index("Apple")
+এখানে count() এবং index() Tuple-এর Method।
+
+len(fruits)
+type(fruits)
+min(numbers)
+max(numbers)
+sum(numbers)
+sorted(numbers)
+list(fruits)
+tuple(fruits)
+এগুলো Python-এর Built-in Function।
+
+====================
+IndexError
+Tuple-এর এমন Index ব্যবহার করলে যেটা Tuple-এর মধ্যে নেই, সেটা IndexError হবে।
+
+TypeError
+Tuple পরিবর্তন করার চেষ্টা কিন্তু Tuple Immutable।
+কীভাবে ঠিক করবো?
+যদি Data পরিবর্তন করতেই হয়, তাহলে List ব্যবহার করতে পারি
+
+ValueError — index()-এ Value না থাকলে
+
+কীভাবে Debug করবো?
+আগে in দিয়ে Check করতে পারি
+
+Debugging-এর ৪টি গুরুত্বপূর্ণ প্রশ্ন
+Index কি valid?
+Tuple পরিবর্তন করার চেষ্টা করছি কি?
+index()-এ Value আছে কি?
+count() আর index() ঠিকভাবে ব্যবহার করেছি কি?
+======================
+key = হলো "কী দেখে sort করবে?"
+আর lambda = হলো "সেই জিনিসটা কীভাবে বের করবে?"
+
+key
+→ sorted()-এর একটি parameter
+→ কোন Value দিয়ে Sort করবে সেটা বলে
+
+lambda student: student[1]
+→ সেই key-এর জন্য Function
+→ প্রতিটি Student থেকে Marks বের করে
+
