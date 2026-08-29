@@ -902,3 +902,93 @@ lambda student: student[1]
 → সেই key-এর জন্য Function
 → প্রতিটি Student থেকে Marks বের করে
 
+=============================
+কাধিক Value একসাথে রাখার একটি Collection Data Structure
+Set
+→ একাধিক Value রাখে
+→ { } ব্যবহার করা হয়
+→ Duplicate থাকে না
+→ সাধারণ Indexing নেই
+============================
+Set-এর সবচেয়ে গুরুত্বপূর্ণ বৈশিষ্ট্যগুলোর একটি হলো:
+একই Value একাধিকবার থাকলেও Set সেটাকে একবারই রাখে।
+
+Duplicate কেন থাকে না - Set-এর উদ্দেশ্য হলো Unique Value-এর Collection রাখা। তাই Duplicate Value থাকে না।
+
+=============================
+Set-এর মধ্যে একটি নতুন Value যোগ করার জন্য add() ব্যবহার করা হয়।
+add() নতুন Unique Value যোগ করে; Duplicate Value যোগ করলে Set-এর কোনো পরিবর্তন হয় না।
+
+===========================
+Set-এর মধ্যে থাকা কোনো নির্দিষ্ট Value মুছে ফেলার জন্য remove() ব্যবহার করা হয়।
+remove()-এর Syntax - set_name.remove(value)
+fruits  → Set
+remove() → Value মুছে ফেলার Method
+"Banana" → যে Value মুছতে চাই
+remove()-এ Value অবশ্যই Set-এর মধ্যে থাকতে হবে, যদি না থাকে তাহলে KeyError হবে।
+remove() Index দিয়ে কাজ করে না
+=========================
+Set-এর মধ্যে থাকা কোনো নির্দিষ্ট Value মুছে ফেলার জন্য discard() ব্যবহার করা হয়।
+
+discard() মেথড ব্যবহার করে যদি Set-এর মধ্যে থাকা কোনো নির্দিষ্ট Value মুছে ফেলার চেষ্টা করা হয় আর সেই ভ্যালু যদি সেট এর মধ্যে না থাকে সে ক্ষেত্রে KeyError হবে না। সেট আগেই মতই থাকবে এটাই discard()-এর সবচেয়ে গুরুত্বপূর্ণ বৈশিষ্ট্য।
+
+গুরুত্বপূর্ণ বৈশিষ্ট্য
+Value আছে:
+remove()   → Remove ✅
+discard()  → Remove ✅
+
+Value নেই:
+remove()   → KeyError ❌
+discard()  → কিছুই করবে না ✅
+
+discard() Value দিয়ে কাজ করে ইনডেক্স দিয়ে নয়। 
+
+========================
+দুটি Set-এর সব Unique Value একসাথে পাওয়াকে Union বলা হয়।
+Union-এর Syntax - set_a.union(set_b)
+আরেকভাবে operator দিয়েও করা যায়
+
+result = set_a | set_b
+
+এখানে | হলো Union Operator
+
+Set সবসময় Unique Value রাখে।
+=====================
+দুইটি Set-এর মধ্যে যে Value দুটো Set-এই Common আছে, সেগুলোকে একসাথে পাওয়া হলো Intersection।
+result = set_a.intersection(set_b)
+
+অর্থাৎ:
+Intersection = Common Values
+
+Intersection Operator - intersection()
+
+Union
+→ দুই Set-এর সব Unique Value
+
+Intersection
+→ দুই Set-এর শুধু Common Value
+
+intersection() Method-এর পাশাপাশি & Operator ব্যবহার করা যায়।
+result = set_a & set_b
+
+===============================
+একটি Set-এর মধ্যে আছে, কিন্তু অন্য Set-এর মধ্যে নেই—এমন Value-গুলো বের করাকে Difference বলে।
+set_a.difference(set_b)
+
+set_a.difference(set_b) এটা হলো: A-এর মধ্যে আছে, B-এর মধ্যে নেই
+set_b.difference(set_a) এটা হলো: B-এর মধ্যে আছে, A-এর মধ্যে নেই
+
+difference() Method-এর পাশাপাশি - Operator ব্যবহার করা যায়।
+set_a - set_b
+
+Difference সবসময় প্রথম Set-এর দিক থেকে চিন্তা করতে হবে।
+
+=============================
+মেথড: intersection()
+অপারেটর: & (AND)
+
+মেথড: union()
+অপারেটর: | (OR)
+
+মেথড: difference()
+অপারেটর: - (NOT)
