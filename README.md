@@ -1,6 +1,9 @@
 # python-learning-journey
 My-python-learning-journey
 
+Python → Automation → Data Processing → APIs → SQL → Data Analysis / Backend / Automation
+(Power BI) Data → Clean → Analyze → Visualize → Dashboard → Business Decision
+
 Variable শুধু Value রাখার জন্য নয়, প্রথম Condition Check করার আগেই Variable-এর অস্তিত্ব থাকা দরকার।
 
 ========================
@@ -992,3 +995,147 @@ Difference সবসময় প্রথম Set-এর দিক থেকে চ
 
 মেথড: difference()
 অপারেটর: - (NOT)
+=========================
+Python-এর Dictionary হলো এমন একটি data structure যেখানে data Key → Value আকারে সংরক্ষণ করা হয়।
+একটি Key-এর সাথে একটি Value সম্পর্কিত থাকে।
+
+Dictionary-তে Value-এর position মনে রাখতে হয় না; Key ব্যবহার করে Value-কে চিহ্নিত করা যায়।
+
+Dictionary-তে position/index-এর পরিবর্তে Key দিয়ে data identify করা হয়।
+
+একটা Dictionary-এর সবচেয়ে গুরুত্বপূর্ণ দুইটি অংশ:
+একটা হচ্ছে Key → আর একটা হচ্ছে Value
+
+তুমি এটাকে এমনভাবে চিন্তা করতে পারো:
+Key হলো তথ্যটির নাম, আর Value হলো সেই তথ্যের আসল মান।
+
+কোনো তথ্যকে একটি নাম/label দিয়ে চিহ্নিত করে রাখতে হয়।
+
+ধরো তোমার কাছে কয়েকটা Box আছে:
+
+┌─────────────┐
+│ name        │ → Shahadat
+├─────────────┤
+│ age         │ → 33
+├─────────────┤
+│ course      │ → Python
+├─────────────┤
+│ country     │ → Bangladesh
+└─────────────┘
+
+বাম পাশের অংশ:
+Key
+
+ডান পাশের অংশ:
+Value
+
+🔥 Dictionary কেন শিখব?
+
+কারণ বাস্তব Software-এ অনেক সময় এমন data নিয়ে কাজ করতে হয়:
+
+Customer
+Product
+Student
+Employee
+Order
+Account
+User
+
+এগুলোর প্রত্যেকটির অনেকগুলো আলাদা information থাকে।
+
+============================
+
+Dictionary তৈরি করার জন্য { } curly brackets ব্যবহার করা হয়।
+
+এর ভিতরে থাকে:
+Key : Value
+
+অর্থাৎ structure:
+{Key: Value}
+
+এখানে : (colon) দিয়ে Key এবং Value আলাদা করা হয়।
+
+তবে Python-এ "Name" এবং "Shahadat" string হলে quotation mark লাগবে।
+=======================
+
+Dictionary-কে কীভাবে চিনবে?
+{
+    "name": "Rahim",
+    "age": 20,
+    "course": "Python"
+}
+
+"name"   → Key
+"Rahim"  → Value
+
+"age"    → Key
+20       → Value
+
+"course" → Key
+"Python" → Value
+=============================
+Dictionary-এর Key হিসেবে সাধারণত immutable/hashable type ব্যবহার করা যায়।
+আমরা একটা variable-এর মধ্যে একজন Student-এর সম্পূর্ণ information রাখতে পারি।
+এটাই Dictionary-এর অন্যতম বড় সুবিধা।
+=============================
+
+Customer
+│
+├── Customer ID → C101
+├── Name → Shahadat
+├── Phone → 01700000000
+└── Due → 5000
+এখানে প্রতিটি label হলো Key, আর তার পাশে থাকা information হলো Value।
+================================
+🔑 Dictionary-তে Index নয়, Key ব্যবহার করি
+==============================
+⭐ Access করার মূল ধারণা
+Dictionary-এর একটি Key জানা থাকলে সেই Key-এর মাধ্যমে তার Value access করা যায়।
+==========================
+Dictionary-তে Value দিয়ে সাধারণভাবে Value access করা হয় না।
+এমন একটি Key দিয়ে Value access করতে চাও যেটা Dictionary-তে নেই:
+তাহলে Python সাধারণভাবে KeyError দেখাবে।
+
+যে Key Dictionary-তে নেই, সেটি দিয়ে সরাসরি Value access করার চেষ্টা করলে সমস্যা হতে পারে।
+=======================
+Dictionary data রাখে:
+Key → Value
+
+Value access করার সময়:
+Key
+
+Dictionary-তে List-এর মতো position/index ধরে Value access করার মূল ধারণা নেই।
+
+যে Key নেই, সেটি দিয়ে সরাসরি access করলে KeyError হতে পারে।
+============================
+Dictionary-তে নতুন Item Add করার সময় মনে রাখবে:
+dictionary["new_key"] = new_value
+===============================
+course Key-এর Value হিসেবে যে List আছে, সেই List-এর মধ্যে নতুন Item যোগ করছি।
+student["course"].append("SQL")
+=====================
+Dictionary থেকে কোনো নির্দিষ্ট Key-Value Pair মুছে ফেলার জন্য del ব্যবহার করা যায়।
+del dictionary[Key]
+
+Key না থাকলে কী হবে?
+তাহলে KeyError হবে।
+
+Dictionary থেকে Item Delete করার আরেকটি গুরুত্বপূর্ণ method হলো: pop()
+dictionary.pop(Key)
+=====================
+Set-এর remove() এবং Dictionary-এর pop() এক জিনিস নয়।
+Data structure আলাদা, তাই method-ও আলাদা।
+========================
+আজকের সবচেয়ে গুরুত্বপূর্ণ পার্থক্য
+keys()
+শুধু Key
+values()
+শুধু Value
+items()
+Key + Value
+=================
+Dictionary-এর get() Method ব্যবহার করে আমরা Key-এর Value বের করতে পারি।
+dictionary.get(Key)
+অর্থাৎ get()-ও Key ব্যবহার করে Value বের করে।
+
+
