@@ -996,6 +996,7 @@ Difference সবসময় প্রথম Set-এর দিক থেকে চ
 মেথড: difference()
 অপারেটর: - (NOT)
 =========================
+
 Python-এর Dictionary হলো এমন একটি data structure যেখানে data Key → Value আকারে সংরক্ষণ করা হয়।
 একটি Key-এর সাথে একটি Value সম্পর্কিত থাকে।
 
